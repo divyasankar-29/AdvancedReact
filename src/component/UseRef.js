@@ -1,8 +1,5 @@
 import React,{useRef} from "react";
 
-const Child = (props) =>{
-    <input type="text" ref={props.ref} />
-}
 
 function UseRef(){
 
@@ -16,7 +13,6 @@ function UseRef(){
         <div>
             <input ref={inputRef} type="text" placeholder="Enter name"/>
             <button onClick={onClick}>click</button>
-            <Child ref={inputRef} />
         </div>
     )
 }

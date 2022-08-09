@@ -7,7 +7,7 @@ function Component3(){
     const {userName,color} = useContext(Name)
         return(
             <div>
-                User name is : {userName}
+                User name is : {userName}<br />
                 color is : {color}
                 <Component4 />
             </div>
