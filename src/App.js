@@ -1,34 +1,40 @@
+import { Card, CardContent, Typography } from '@material-ui/core';
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Home from './component/Home';
-import About from './component/About';
-import Display from './component/Display';
-import Linker from './component/Linker';
+import TodoInput from './component/TodoInput';
+import TodoList from './component/TodoList';
+import {makeStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root:{
+    width : "900px",
+    marginLeft : "200px",
+    marginTop : "30px",
+    alignItems : "center",
+    height : "150px",
+    backgroundColor : "burlywood"
+  },
+  typo:{
+    fontFamily : "arial",
+    fontSize : "25px"
+  }
+})
 
 function App() {
+
+  const classes = useStyles();
   return (
     <div className="App">
-      {/* <UseRef />
-      <br /><br />
-      <HandlingRefs />
-      <br /><br />
-      <Component1 /> */}
-      {/* <HandlingAPI /> */}
-      <BrowserRouter>
-      <div>
-        <Linker />
-      
+      <Card className={classes.root}>
+        <CardContent sx={{alignItems:"center"}}>
+          <Typography className={classes.typo}>TODO APP</Typography>
+        <TodoInput />
+        </CardContent>
+      </Card>
+      <br />
+      <TodoList /> 
     </div>
-     
-      <Routes>
-        <Route path="/" element={<Home />} exact/>
-        <Route path="/about" element = {<About />} />
-        <Route path="/display/:id" element = {<Display />} />
-      </Routes>
-      
-    </BrowserRouter>
-    </div>
+    
   );
 }
 
