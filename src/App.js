@@ -4,14 +4,15 @@ import './App.css';
 import TodoInput from './component/TodoInput';
 import TodoList from './component/TodoList';
 import {makeStyles} from '@material-ui/core/styles';
+import UserContainer from './component/redux-thunk/UserContainer';
 
 const useStyles = makeStyles({
   root:{
-    width : "900px",
-    marginLeft : "200px",
+    width : "600px",
+    marginLeft : "350px",
     marginTop : "30px",
     alignItems : "center",
-    height : "150px",
+    height : "500px",
     backgroundColor : "burlywood"
   },
   typo:{
@@ -27,12 +28,13 @@ function App() {
     <div className="App">
       <Card className={classes.root}>
         <CardContent sx={{alignItems:"center"}}>
-          <Typography className={classes.typo}>TODO APP</Typography>
-        <TodoInput />
+          {/* <Typography className={classes.typo}>USER NAMES</Typography> */}
+        {/* <TodoInput /> */}
         </CardContent>
+        <UserContainer />
       </Card>
-      <br />
-      <TodoList /> 
+      {/* <br />
+      <TodoList />  */}
     </div>
     
   );
