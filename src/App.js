@@ -5,6 +5,7 @@ import TodoInput from './component/TodoInput';
 import TodoList from './component/TodoList';
 import {makeStyles} from '@material-ui/core/styles';
 import UserContainer from './component/redux-thunk/UserContainer';
+import Search from './component/Search';
 
 const useStyles = makeStyles({
   root:{
@@ -26,15 +27,18 @@ function App() {
   const classes = useStyles();
   return (
     <div className="App">
-      <Card className={classes.root}>
-        <CardContent sx={{alignItems:"center"}}>
+      {/* <Card className={classes.root}>
+        <CardContent sx={{alignItems:"center"}}> */}
           {/* <Typography className={classes.typo}>USER NAMES</Typography> */}
         {/* <TodoInput /> */}
-        </CardContent>
+        {/* </CardContent>
         <UserContainer />
-      </Card>
+      </Card> */}
       {/* <br />
       <TodoList />  */}
+      <Search>
+        Search : 
+      </Search>
     </div>
     
   );
